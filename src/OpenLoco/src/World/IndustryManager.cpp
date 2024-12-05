@@ -621,13 +621,17 @@ namespace OpenLoco::IndustryManager
             industry->name = indObj->var_02;
 
             // Set industry name
-            for (auto& innerInd : IndustryManager::industries())
+            for (auto& otherIndustry : IndustryManager::industries())
             {
-                if (innerInd.name != industry->name)
+                if (otherIndustry.town == industry->town) {
+                    
+                }
+                /*
+                if (otherIndustry.name != industry->name)
                 {
                     continue;
                 }
-                if (&innerInd == industry)
+                if (&otherIndustry == industry)
                 {
                     continue;
                 }
@@ -650,6 +654,7 @@ namespace OpenLoco::IndustryManager
                     industry->name = newName;
                     break;
                 }
+                */
             }
             return id;
         }
