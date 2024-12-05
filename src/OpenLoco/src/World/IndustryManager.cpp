@@ -620,6 +620,7 @@ namespace OpenLoco::IndustryManager
             industry->town = nearbyTown;
             industry->name = indObj->var_02;
 
+            // Set industry name
             for (auto& innerInd : IndustryManager::industries())
             {
                 if (innerInd.name != industry->name)
